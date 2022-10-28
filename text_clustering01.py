@@ -30,7 +30,7 @@ categories = [
  'alt.atheism',
  'soc.religion.christian',
 ]
-dataset = fetch_20newsgroups(subset='train', categories=categories, shuffle=True)
+dataset = fetch_20newsgroups(subset='train', categories=categories, shuffle=True, remove=('headers', 'footers', 'quotes'))
 
 df = pd.DataFrame(dataset.data, columns=["corpus"])
 print(df)

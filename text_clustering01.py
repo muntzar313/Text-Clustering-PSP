@@ -38,10 +38,11 @@ print(df)
 df.describe()
 
 nltk.download('stopwords')
-
 import nltk
 from nltk.corpus import stopwords
-stopwords.words("english")[:10]
+# nltk.download('stopwords')
+
+stopwords.words("english")[:10] # <-- import the english stopwords
 
 def preprocess_text(text: str, remove_stopwords: bool) -> str:
     text = re.sub(r"http\S+", "", text)

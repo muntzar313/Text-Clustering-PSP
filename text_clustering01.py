@@ -90,3 +90,14 @@ get_top_keywords(10)
 
 cluster_map = {0: "Sports", 1: "Technology", 2: "Religion"}                          
 df['cluster'] = df['cluster'].map(cluster_map)
+
+# set image size
+plt.figure(figsize=(12, 7))
+# set a title
+plt.title("TF-IDF + KMeans 20newsgroup clustering", fontdict={"fontsize": 18})
+# set axes names
+plt.xlabel("X0", fontdict={"fontsize": 16})
+plt.ylabel("X1", fontdict={"fontsize": 16})
+# create scatter plot with seaborn, where hue is the class used to group the data
+sns.scatterplot(data=df, x='x0', y='x1', hue='cluster', palette="viridis")
+plt.show()

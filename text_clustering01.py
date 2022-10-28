@@ -87,5 +87,5 @@ def get_top_keywords(n_terms):
             
 get_top_keywords(10)
 
-cluster_map = {0: "1", 1: "2", 2: "3"}                          
+cluster_map = {0: "Sports", 1: "Technology", 2: "Religion"}                          
 df['cluster'] = df['cluster'].map(cluster_map)
